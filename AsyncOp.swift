@@ -161,7 +161,7 @@ open class AsyncOp<InputType, OutputType>: Operation {
     }
 
     // MARK: Private storage
-    private typealias AsyncInputRequest = () -> AsyncOpValue<InputType>
+    fileprivate typealias AsyncInputRequest = () -> AsyncOpValue<InputType>
     fileprivate var handlerForAsyncOpInputRequest: AsyncInputRequest?
     fileprivate var preconditionEvaluators = [AsyncOpPreconditionEvaluator]()
     fileprivate var implementationHandler: AsyncOpThrowingClosure?
